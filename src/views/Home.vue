@@ -1,18 +1,32 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Coins />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import Coins from "@/components/Coins.vue";
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    HelloWorld
-  }
-}
+    Coins,
+  },
+  data() {
+    return {
+    };
+  },
+  mounted() {
+    this.getSymbols();
+  },
+  methods: {
+    async getSymbols() {
+      try {
+        const response = await this.$store.dispatch("getSymbols");
+        console.log(response);
+      } catch (error) {
+        console.log("There was an error: " + error.response);
+      }
+    },
+  },
+};
 </script>
