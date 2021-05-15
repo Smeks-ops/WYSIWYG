@@ -1,9 +1,7 @@
 <template>
   <div>
-    <button @click="back">Go Back</button>
-    <h2>
-      {{symbol.symbol}} Details
-    </h2>
+    <button @click="back">&laquo;Previous</button>
+    <h2>{{ symbol.symbol }} Details</h2>
     <ul>
       <li>
         <h6>
@@ -13,7 +11,7 @@
           {{ symbol.askPrice }}
         </div>
       </li>
-       <li>
+      <li>
         <h6>
           Ask Quantity
         </h6>
@@ -21,7 +19,7 @@
           {{ symbol.askQty }}
         </div>
       </li>
-       <li>
+      <li>
         <h6>
           Bid Price
         </h6>
@@ -29,7 +27,7 @@
           {{ symbol.bidPrice }}
         </div>
       </li>
-       <li>
+      <li>
         <h6>
           Bid Quantity
         </h6>
@@ -37,7 +35,7 @@
           {{ symbol.bidQty }}
         </div>
       </li>
-       <li>
+      <li>
         <h6>
           Close Time
         </h6>
@@ -45,7 +43,7 @@
           {{ symbol.closeTime }}
         </div>
       </li>
-       <li>
+      <li>
         <h6>
           Count
         </h6>
@@ -53,7 +51,7 @@
           {{ symbol.count }}
         </div>
       </li>
-       <li>
+      <li>
         <h6>
           First ID
         </h6>
@@ -61,7 +59,7 @@
           {{ symbol.firstId }}
         </div>
       </li>
-       <li>
+      <li>
         <h6>
           High Price
         </h6>
@@ -69,7 +67,7 @@
           {{ symbol.highPrice }}
         </div>
       </li>
-       <li>
+      <li>
         <h6>
           Last ID
         </h6>
@@ -77,7 +75,7 @@
           {{ symbol.lastId }}
         </div>
       </li>
-       <li>
+      <li>
         <h6>
           Last Price
         </h6>
@@ -85,7 +83,7 @@
           {{ symbol.lastPrice }}
         </div>
       </li>
-       <li>
+      <li>
         <h6>
           Last Quantity
         </h6>
@@ -93,7 +91,7 @@
           {{ symbol.lastQty }}
         </div>
       </li>
-       <li>
+      <li>
         <h6>
           Low Price
         </h6>
@@ -101,7 +99,7 @@
           {{ symbol.lowPrice }}
         </div>
       </li>
-       <li>
+      <li>
         <h6>
           Open Price
         </h6>
@@ -109,7 +107,7 @@
           {{ symbol.openPrice }}
         </div>
       </li>
-       <li>
+      <li>
         <h6>
           Open Time
         </h6>
@@ -117,7 +115,7 @@
           {{ symbol.openTime }}
         </div>
       </li>
-       <li>
+      <li>
         <h6>
           Previous Close Price
         </h6>
@@ -165,7 +163,7 @@
           {{ symbol.volume }}
         </div>
       </li>
-        <li>
+      <li>
         <h6>
           Weighted Average Price
         </h6>
@@ -189,8 +187,8 @@ export default {
   },
   methods: {
     back() {
-      this.$router.push('/')
-    }
+      this.$router.push("/");
+    },
   },
 };
 </script>
@@ -226,6 +224,6 @@ li h6 {
   text-transform: uppercase;
 }
 li:last-child {
-  border: none
+  border: none;
 }
 </style>
